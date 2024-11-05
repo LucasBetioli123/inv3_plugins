@@ -151,9 +151,9 @@ class Window(wx.Dialog):
         self.check_rotation.Bind(wx.EVT_CHECKBOX, self.OnEnableRotation)
 
     def OnCreateMarker(self, evt):
-        coord_project_filename = r"F:\CARLO RONDINONI\coleta_neurosoft\mapa_invesalius\escala de 0-250\coord_offsetcarlo_-7.txt"
+        coord_project_filename = r"F:\CARLO RONDINONI\coleta_neurosoft\mapa_invesalius\escala de 0-250\marcadorescommais_not_hot\coord_offsetcarlo0_white_matternew+oldoffset0.txt"
         df_planilha = pd.read_csv(coord_project_filename, delimiter='\t', header=None)
-        nova_coluna = df_planilha.iloc[1:56, :].to_numpy()
+        nova_coluna = df_planilha.iloc[1:, :].to_numpy()
         
         for i in range(len(nova_coluna)):
             
